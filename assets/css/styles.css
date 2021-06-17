@@ -569,13 +569,6 @@ img{
 }
 
 
-
-/*==================== SERVICES ====================*/
-
-
-/* Active Modal */
-
-
 /*==================== PORTFOLIO ====================*/
 .portfolio__container{
     overflow: initial;
@@ -593,14 +586,6 @@ img{
 .portfolio__description{
     margin-bottom: var(--mb-0-75);
 }
-
-
-
-/*==================== PROJECT IN MIND ====================*/
-
-
-/*==================== TESTIMONIAL ====================*/
-
 
 /*==================== CONTACT ME ====================*/
 
@@ -706,17 +691,6 @@ img{
 .footer__social{
     color: #FFF;
 }
-
-
-
-/*========== SCROLL UP ==========*/
-
-
-/* Show scroll */
-
-
-/*========== SCROLL BAR ==========*/
-
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
@@ -888,3 +862,19 @@ img{
 
 
 /* For large devices */
+@media  screen and (min-width: 1024px) {
+    .home__img{
+        width: 500px;
+    }
+    
+    .home__container,
+    .footer__container,
+    .skills__container,
+    .contact__container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .nav{
+        padding-left: 50px;
+    }
+}
