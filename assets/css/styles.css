@@ -20,7 +20,8 @@
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #FFF;
-
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;;
 
@@ -692,10 +693,25 @@ img{
     color: #FFF;
 }
 
+.show-scroll{
+    bottom: 5rem;
+}
+
+::-webkit-scrollbar{
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 
-@media screen and (max-width: 350px){
+@media screen and (min-width: 350px){
     .container{
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
@@ -703,6 +719,14 @@ img{
 
     .nav__menu{
         padding: 2rem .25rem 4rem;
+    }
+
+    .nav__logo{
+        padding-left: 10px;
+    }
+
+    .nav__btns{
+        padding-right: 20px;
     }
 
     .nav__list{
@@ -723,6 +747,19 @@ img{
     .qualification__data{
         gap: .5rem;
     }
+    .footer__container,
+    .contact__container{
+        margin-left: 10px;
+    }
+
+    .skills__container{
+        padding-right: 20px;
+    }
+
+    .home__container{
+        padding-left: 10px;
+    }
+   
 }
 
 /* For medium devices */
@@ -751,12 +788,13 @@ img{
         grid-template-columns: .6fr;
         justify-content: center;
     }
+
 }
 
 @media screen and (min-width: 768px){
-    .container{
-        margin-left: auto;
-        margin-left: auto;
+    .skills__container{
+        margin-left: 5rem;
+        margin-right: 20rem;
     }
 
     body{
@@ -856,6 +894,9 @@ img{
     }
     .footer__copy{
         margin-top: 4.5rem;
+    }
+    .nav__list{
+        padding-top: 20px;
     }
 
 }
